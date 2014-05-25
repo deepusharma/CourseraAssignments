@@ -26,14 +26,15 @@ What is included in the repository:
 Pre-requisites:
 ----------------------------------------------
  It is assumed that the data is available in the current working directory. It should be extracted from the zipfile provided for assignment. Structure should be similiar to as below:
-   .
-   run_analysis.R
-   CodeBook.md
-   README.md
-   UCI HAR Dataset
-      test
-      train
-      ....
+
+* .
+* run_analysis.R
+* CodeBook.md
+* README.md
+* UCI HAR Dataset
+ * test
+ * train
+ * ....
 
 
 The Task and Approach:
