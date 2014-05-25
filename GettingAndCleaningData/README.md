@@ -38,17 +38,21 @@ Pre-requisites:
 
 The Task and Approach:
 ----------------------------------------------
-
 The provided scripts (run_analysis.R) includes the following sub tasks: 
 * Merges the training and the test sets to create one data set.
-  
-
+  1. Load the test set data and include subject and activity information using cbind
+  2. Load the train set data and include subject and activity information using cbind 
+  3. merge the two datasets into consolidated set using rbind
+  4. Assign the lables from features.txt. Also include header for subject and activity
 * Extracts only the measurements on the mean and standard deviation for each measurement. 
-
+  Using the grep, extract only the column names corresponding to mean and std and use the indices to get a subest of the information from the consolidated dataset
 * Uses descriptive activity names to name the activities in the data set
-
+  Read the activity lables from activity_labels.txt and add another column to the above dataset providing the descritpion of each of the activities
 * Appropriately labels the data set with descriptive activity names. 
-
+ Update the colnames appropriately.
 * Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-
+  1. Use plyr.ddply to get mean of each of the variables grouping by subject and activity
+  2. Change the headers/lables as per the guidance in the lectures by removing dot, comman, hyphen parenthesis and changing the variable names to lowercase.
+  3. updating the dataframe with new headers
+  4. writing the contents in a tab delimited file.
 
